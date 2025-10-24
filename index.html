@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <form onsubmit="CalculateBMI(); return false">
+        <label for="weight">Enter the weight of object in kilogram</label><br>
+        <input type="number" name="weightofobj" id="weightobj" placeholder="Enter the weight of object in kilogram"><br>
+        <label for="height">Enter the height of object in meters</label><br>
+        <input type="number" name="heightofobj" id="heightobj" placeholder="Enter the height of object in meters"><br>
+        <button type="submit">Calculate</button>
+
+    </form>
+    <script>
+        function CalculateBMI(){
+        let weight=document.getElementById("weightobj").value;
+        let height=document.getElementById("heightobj").value;
+        let bmi=weight/height**2;
+        document.write(bmi);
+        }
+    </script>
+</body>
+</html>
